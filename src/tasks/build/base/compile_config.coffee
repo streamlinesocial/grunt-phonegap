@@ -9,7 +9,15 @@ module.exports = compileConfig = (grunt) ->
     phonegapPath = helpers.config 'path'
     configXml = helpers.config 'config'
 
-    dest = path.join phonegapPath, 'www', 'config.xml'
+    ###
+    @todo: we may need to make this configurable for backwards-compatability
+    @see: http://stackoverflow.com/a/23354889
+    if we put the config.xml inside the www directory as of about cordova 3.4.0, then
+    app/ is considered the best candidate, what we want is to make cordova cli think that
+    app/<config.path> is the best canidate, thus we need to place the config.xml at
+    app/<config.path>/config.xml and not at app/<config.path>/www/config.xml
+    ###
+    dest = path.join phonegapPath, 'config.xml'
 
     if grunt.util.kindOf(configXml) == 'string'
       grunt.log.writeln "Copying static #{configXml}"
