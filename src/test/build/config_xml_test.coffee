@@ -12,13 +12,13 @@ path = require 'path'
 exports.phonegap =
   'the specified config.xml template should be compiled': (test) ->
     test.expect 1
-    test.ok grunt.file.isFile('test/phonegap/www/config.xml'), 'a file should be written to config.xml'
+    test.ok grunt.file.isFile('test/phonegap/config.xml'), 'a file should be written to config.xml'
     test.done()
 
   'configData should be interpolated in config.xml': (test) ->
     test.expect 2
     data = grunt.config.get('phonegap.config.config.data')
-    xml = grunt.file.read 'test/phonegap/www/config.xml'
+    xml = grunt.file.read 'test/phonegap/config.xml'
     config = xmlParser.toJson xml, object: true
     test.equal config.widget.id, data.id, 'id should match config.id'
     test.equal config.widget.version, data.version, 'version should match config.version'
