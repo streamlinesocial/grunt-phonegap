@@ -58,6 +58,21 @@
         return done();
       });
     });
+    // define a light-weight task that can be used to generate the assets only
+    grunt.registerTask('phonegap:refresh', 'Build as a Phonegap application', function(platform) {
+      var build, done, helpers, platforms;
+      helpers = require('./helpers')(grunt);
+      helpers.mergeConfig(defaults);
+      build = require('./refresh')(grunt);
+      platforms = platform ? [platform] : helpers.config('platforms');
+      done = this.async();
+      return build.run(platforms, function(err, result) {
+        if (err) {
+          grunt.fatal(err);
+        }
+        return done();
+      });
+    });
     grunt.registerTask('phonegap:run', 'Run a Phonegap application', function() {
       var device, done, helpers, platform, run;
       helpers = require('./helpers')(grunt);
