@@ -9,6 +9,7 @@
     var defaults;
     defaults = {
       root: 'www',
+      hooks: 'hooks',
       config: 'www/config.xml',
       path: 'build',
       cleanBeforeBuild: true,

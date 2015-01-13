@@ -11,6 +11,7 @@
       cloneRoot: require('./build/base/clone_root')(grunt).run,
       indexHtml: require('./build/base/index_html')(grunt).run,
       cloneCordova: require('./build/base/clone_cordova')(grunt).run,
+      cloneHooks: require('./build/base/clone_hooks')(grunt).run,
       compileConfig: require('./build/base/compile_config')(grunt).run,
       addPlugins: require('./build/base/plugin')(grunt).add,
       buildPlatforms: require('./build/base/platform')(grunt).build
