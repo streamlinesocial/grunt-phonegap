@@ -49,12 +49,12 @@
           });
         }
         if ((screens != null ? (_ref7 = screens.ios) != null ? _ref7.iphone667h : void 0 : void 0) != null) {
-          grunt.file.copy(screens.ios.iphone667h, path.join(res, 'Default-667h~iphone.png'), {
+          grunt.file.copy(screens.ios.iphone667h, path.join(res, 'Default-667h.png'), {
             encoding: null
           });
         }
         if ((screens != null ? (_ref8 = screens.ios) != null ? _ref8.iphone763h : void 0 : void 0) != null) {
-          grunt.file.copy(screens.ios.iphone763h, path.join(res, 'Default-Landscape-763h~iphone.png'), {
+          grunt.file.copy(screens.ios.iphone763h, path.join(res, 'Default-Landscape-763h.png'), {
             encoding: null
           });
         }
