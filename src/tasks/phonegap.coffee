@@ -41,6 +41,18 @@ module.exports = (grunt) ->
       if err then grunt.fatal err
       done()
 
+  grunt.registerTask 'phonegap:refresh', 'Update build.dir/www with root/www', (platform) ->
+    helpers = require('./helpers')(grunt)
+    helpers.mergeConfig defaults
+    build = require('./refresh')(grunt)
+
+    platforms = if platform then [platform] else helpers.config 'platforms'
+
+    done = @async()
+    build.run platforms, (err, result) ->
+      if err then grunt.fatal err
+      done()
+
   grunt.registerTask 'phonegap:run', 'Run a Phonegap application', ->
     helpers = require('./helpers')(grunt)
     helpers.mergeConfig defaults

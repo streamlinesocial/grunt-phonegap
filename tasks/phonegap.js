@@ -58,8 +58,7 @@
         return done();
       });
     });
-    // define a light-weight task that can be used to generate the assets only
-    grunt.registerTask('phonegap:refresh', 'Build as a Phonegap application', function(platform) {
+    grunt.registerTask('phonegap:refresh', 'Update build.dir/www with root/www', function(platform) {
       var build, done, helpers, platforms;
       helpers = require('./helpers')(grunt);
       helpers.mergeConfig(defaults);
