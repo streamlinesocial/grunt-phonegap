@@ -21,7 +21,7 @@
     return {
       run: function(platforms, fn) {
         platforms = helpers.reducePlatforms(platforms);
-        return fluid(base).clean().createTree(platforms).cloneRoot().indexHtml().cloneCordova().compileConfig().custom(function(done) {
+        return fluid(base).clean().createTree(platforms).cloneRoot().indexHtml().cloneCordova().cloneHooks().compileConfig().custom(function(done) {
           return base.addPlugins(plugins, function() {
             return done();
           });
