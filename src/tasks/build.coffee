@@ -24,6 +24,7 @@ module.exports = build = (grunt) ->
       .cloneRoot()
       .indexHtml()
       .cloneCordova()
+      .cloneHooks()
       .compileConfig()
       .custom (done) ->
         base.addPlugins plugins, -> done()
