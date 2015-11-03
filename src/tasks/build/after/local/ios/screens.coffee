@@ -34,7 +34,7 @@ module.exports = screens = (grunt) ->
     if screens?.ios?.iphone667h?
       grunt.file.copy screens.ios.iphone667h, path.join(res, 'Default-667h.png'), encoding: null
 
-    if screens?.ios?.iphone763h?
-      grunt.file.copy screens.ios.iphone763h, path.join(res, 'Default-Landscape-763h.png'), encoding: null
+    if screens?.ios?.iphone736h?
+      grunt.file.copy screens.ios.iphone736h, path.join(res, 'Default-736h.png'), encoding: null
 
     if fn then fn()

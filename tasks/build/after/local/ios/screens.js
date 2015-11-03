@@ -53,8 +53,8 @@
             encoding: null
           });
         }
-        if ((screens != null ? (_ref8 = screens.ios) != null ? _ref8.iphone763h : void 0 : void 0) != null) {
-          grunt.file.copy(screens.ios.iphone763h, path.join(res, 'Default-Landscape-763h.png'), {
+        if ((screens != null ? (_ref8 = screens.ios) != null ? _ref8.iphone736h : void 0 : void 0) != null) {
+          grunt.file.copy(screens.ios.iphone736h, path.join(res, 'Default-736h.png'), {
             encoding: null
           });
         }
