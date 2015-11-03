@@ -10,7 +10,6 @@
     defaults = {
       cli: 'phonegap local',
       root: 'www',
-      hooks: 'hooks',
       config: 'www/config.xml',
       configXml: 'www/config.xml',
       path: 'build',

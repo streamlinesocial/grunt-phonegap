@@ -22,8 +22,9 @@
         app/ is considered the best candidate, what we want is to make cordova cli think that
         app/<config.path> is the best canidate, thus we need to place the config.xml at
         app/<config.path>/config.xml and not at app/<config.path>/www/config.xml
+        dest = path.join phonegapPath, 'config.xml'
          */
-        dest = path.join(phonegapPath, 'config.xml');
+        dest = path.join(phonegapPath, 'www', 'config.xml');
         if (grunt.util.kindOf(configXml) === 'string') {
           grunt.log.writeln("Copying static " + configXml);
           return cp(configXml, dest, function(err) {
