@@ -1,5 +1,5 @@
 path = require 'path'
-ncp = require('ncp').ncp
+fs = require('fs-extra')
 
 module.exports = cloneRoot = (grunt) ->
   helpers = require('../../helpers')(grunt)
@@ -9,9 +9,10 @@ module.exports = cloneRoot = (grunt) ->
       grunt.log.writeln mergesPath
       grunt.log.writeln 'Cloning root directory'
       phonegapPath = helpers.config 'path'
-      ncp mergesPath, path.join(phonegapPath, 'merges'), { stopOnError: true }, (err) =>
+      fs.copy mergesPath, path.join(phonegapPath, 'merges'), (err) =>
         if err then grunt.warn err
         if fn then fn err
 
     else
+      grunt.log.writeln 'NOT Cloning root directory'
       if fn then fn()

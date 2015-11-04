@@ -7,6 +7,7 @@ module.exports = build = (grunt) ->
     createTree: require('./build/base/create_tree')(grunt).run
     cloneRoot: require('./build/base/clone_root')(grunt).run
     cloneMerges: require('./build/base/clone_merges')(grunt).run
+    cloneHooks: require('./build/base/clone_hooks')(grunt).run
     indexHtml: require('./build/base/index_html')(grunt).run
     cloneCordova: require('./build/base/clone_cordova')(grunt).run
     compileConfig: require('./build/base/compile_config')(grunt).run
@@ -24,6 +25,7 @@ module.exports = build = (grunt) ->
       .createTree(platforms)
       .cloneRoot()
       .cloneMerges()
+      .cloneHooks()
       .indexHtml()
       .cloneCordova()
       .compileConfig()

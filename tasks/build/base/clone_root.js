@@ -1,9 +1,9 @@
 (function() {
-  var cloneRoot, ncp, path;
+  var cloneRoot, fs, path;
 
   path = require('path');
 
-  ncp = require('ncp').ncp;
+  fs = require('fs-extra');
 
   module.exports = cloneRoot = function(grunt) {
     var helpers;
@@ -14,9 +14,7 @@
         grunt.log.writeln('Cloning root directory');
         rootPath = helpers.config('root');
         phonegapPath = helpers.config('path');
-        return ncp(rootPath, path.join(phonegapPath, 'www'), {
-          stopOnError: true
-        }, (function(_this) {
+        return fs.copy(rootPath, path.join(phonegapPath, 'www'), (function(_this) {
           return function(err) {
             if (err) {
               grunt.warn(err);

@@ -5,7 +5,7 @@
 
   path = require('path');
 
-  URI = require('URIjs');
+  URI = require('urijs');
 
   module.exports = plugin = function(grunt) {
     var addPlugin, helpers;

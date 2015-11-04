@@ -8,8 +8,9 @@
   module.exports = function(grunt) {
     var defaults;
     defaults = {
-      cli: 'phonegap local',
+      cli: 'phonegap',
       root: 'www',
+      hooks: 'hooks',
       config: 'www/config.xml',
       configXml: 'www/config.xml',
       path: 'build',

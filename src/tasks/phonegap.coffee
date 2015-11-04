@@ -4,8 +4,9 @@ async = require 'async'
 module.exports = (grunt) ->
 
   defaults =
-    cli: 'phonegap local'
+    cli: 'phonegap'
     root: 'www'
+    hooks: 'hooks'
     config: 'www/config.xml' #deprecated as was returning
     configXml: 'www/config.xml'
     path: 'build'

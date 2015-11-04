@@ -1,6 +1,6 @@
 async = require 'async'
 path = require 'path'
-URI = require 'URIjs'
+URI = require 'urijs'
 
 module.exports = plugin = (grunt) ->
   helpers = require('../../helpers')(grunt)
