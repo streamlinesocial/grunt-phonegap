@@ -23,6 +23,11 @@
             encoding: null
           });
         }
+        if (icons != null ? (_ref1 = icons.ios) != null ? _ref1.icon29x3 : void 0 : void 0) {
+          grunt.file.copy(icons.ios.icon29x3, path.join(res, 'icon-small@3x.png'), {
+            encoding: null
+          });
+        }
         if (icons != null ? (_ref2 = icons.ios) != null ? _ref2.icon40 : void 0 : void 0) {
           grunt.file.copy(icons.ios.icon40, path.join(res, 'icon-40.png'), {
             encoding: null
